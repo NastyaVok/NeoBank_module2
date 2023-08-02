@@ -1050,7 +1050,7 @@ const API_HOST_NEWS = "newsapi.org";
 const COUNTRY = "us";
 const SIZE = "40";
 const CATEGORY = "business";
-const API_URL_NEWS = "https://" + API_HOST_NEWS + `/v2/top-headlines?country=${COUNTRY}&pageSize=${SIZE}&category=${CATEGORY}`;
+const API_URL_NEWS = "https://" + API_HOST_NEWS + `/v2/top-headlines?country=${COUNTRY}&pageSize=${SIZE}&category=${CATEGORY}&apiKey=acb62ce1bbca44248f9ffbb8faf7db31`;
 
 },{"../../apiKeys":"lS76g","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lS76g":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

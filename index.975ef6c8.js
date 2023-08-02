@@ -1044,13 +1044,13 @@ var _apiKeys = require("../../apiKeys");
 const API_KEY_CURRENCY = (0, _apiKeys.CURRENCY);
 const API_HOST_CURRENCY = "currency-exchange.p.rapidapi.com";
 const EXCHANGE = "exchange";
-const API_URL_CURRENCY = "http://" + API_HOST_CURRENCY + "/" + EXCHANGE;
+const API_URL_CURRENCY = "https://" + API_HOST_CURRENCY + "/" + EXCHANGE;
 const API_KEY_NEWS = (0, _apiKeys.NEWS);
 const API_HOST_NEWS = "newsapi.org";
 const COUNTRY = "us";
 const SIZE = "40";
 const CATEGORY = "business";
-const API_URL_NEWS = "http://" + API_HOST_NEWS + `/v2/top-headlines?country=${COUNTRY}&pageSize=${SIZE}&category=${CATEGORY}`;
+const API_URL_NEWS = "https://" + API_HOST_NEWS + `/v2/top-headlines?country=${COUNTRY}&pageSize=${SIZE}&category=${CATEGORY}`;
 
 },{"../../apiKeys":"lS76g","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lS76g":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

@@ -1,0 +1,1 @@
+{"mappings":"AAAA,MAAM,cAAc,SAAS,eAAe;AAC5C,MAAM,cAAc,SAAS,eAAe","sources":["constants/root.js"],"sourcesContent":["const ROOT_HEADER = document.getElementById('header');\r\nconst ROOT_FOOTER = document.getElementById('footer');"],"names":[],"version":3,"file":"index.f5d7430a.js.map","sourceRoot":"/__parcel_source_root/"}

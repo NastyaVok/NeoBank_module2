@@ -1,0 +1,80 @@
+$white: #fff;
+$black: #000000;
+$grey: #808080;
+$red: #FF5631;
+$pink: #B4387A;
+$yellow: #B2A35F;
+$brown: #7B7454;
+$blue: #003CFF;
+$purple: #5B35D5;
+$orange: #EB801D;
+
+$ff-main: 'Ubuntu', sans-serif;
+$ff-nunito: 'Nunito Sans', sans-serif;
+$ff-rubik: 'Rubik', sans-serif;
+  
+$fs-header: 48px;
+$fs-big: 30px; 
+$fs-medium: 20px;
+$fs-small: 16px;
+
+$lh-header: 50px;
+$lh-big: 30px;
+$lh-medium: 22.4px;
+$lh-small: 14px;
+
+$br-big: 28px;
+$br-medium: 20px;
+$br-small: 16px;
+
+$s-big: 40px;
+$s-medium: 32px;
+$s-small: 16px;
+
+$t-small: 0.4s;
+
+$gradient: linear-gradient(rgba(244, 244, 244, 0.9), rgba(178, 178, 178, 0), rgba(178, 178, 178, 0.8));
+
+$shadow: 0 2px 4px rgba(187, 187, 187, 0.2), 0 0 4px rgba(0, 0, 0, 0.08);
+  
+*,  
+::after, 
+::before {
+    box-sizing: border-box;
+    font-family: $ff-main;
+}
+  
+li,
+ul,
+p,
+button,
+h1,
+h2,
+h3,
+h4,
+figure {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    border-style: none;
+}
+  
+img {
+    display: block;
+}
+  
+a {
+    color: inherit;
+    cursor: default;
+    text-decoration: none;
+    outline: none;
+}
+
+address {
+    font-style: inherit;
+}
+
+.container {
+    margin: auto;
+    max-width: 1300px;
+}

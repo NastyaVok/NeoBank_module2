@@ -1,0 +1,137 @@
+@import '../../styles/main';
+
+
+.exchange {
+    margin-bottom: 48px;
+}
+
+.exchange__inner {
+    background: $gradient;
+    border-radius: $br-big;
+    box-shadow: $shadow;
+    padding: $s-medium;
+}
+
+.exchange__head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.exchange__head-title,
+.exchange__head-subtitle,
+.exchange__column-header {
+    font-weight: 500;
+    line-height: $lh-header;
+}
+
+.exchange__head-title {
+    color: #1C1C1E;
+    font-size: $fs-big;
+}
+
+.exchange__head-subtitle {
+    color: $black;
+    font-size: $fs-small;
+}
+
+.exchange__column-header {
+    color: $black;
+    font-size: $fs-medium;
+    margin-bottom: $s-medium;
+}
+
+.exchange__column-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 38px;
+}
+
+.exchange__column-list {
+    display: flex;
+}
+
+.exchange__column-list + .exchange__column-list {
+    margin-top: $s-medium;
+}
+
+.exchange__column-item {
+    display: flex;
+}
+
+.exchange__column-item + .exchange__column-item {
+    margin-left: $s-medium;
+}
+
+.exchange__column-title,
+.exchange__column-text,
+.exchange__text {
+    font-weight: 700;
+    font-size: $fs-medium;
+    line-height: $lh-medium;
+}
+
+.exchange__column-title {
+    color: $grey;
+    margin-right: 20px;
+}
+
+.exchange__column-text {
+    color: $black;    
+}
+
+.exchange__text {
+    color: $white;
+}
+
+@media (max-width: 840px) {
+    .exchange__head {
+        display: block;
+    }
+}
+
+@media (max-width: 660px) { 
+    .exchange__head-title {
+        font-size: $fs-medium;
+        line-height: $lh-medium;
+    }
+    .exchange__column-title {
+        margin-right: 10px;
+    }
+    .exchange__head-subtitle {
+        font-size: 14px;
+    }
+    .exchange__column-title,
+    .exchange__column-text {
+        font-weight: 500;
+    }
+    .exchange__column-img {
+        display: none;
+    }
+    .exchange__column-item + .exchange__column-item {
+        margin-left: $s-small;
+    }
+}
+
+@media (max-width: 400px) { 
+    .exchange__head-subtitle {
+        font-size: 12px;
+    }
+    .exchange__head {
+        margin-bottom: 0;
+    }
+    .exchange__column-header {
+        margin-bottom: 6px;
+    }
+    .exchange__column-title,
+    .exchange__column-text {
+        font-size: $fs-small;
+    }
+    .exchange__column-title {
+        margin-right: 2px;
+    }
+    .exchange__column-item + .exchange__column-item {
+        margin-left: 6px;
+    }
+}

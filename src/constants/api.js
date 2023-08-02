@@ -14,4 +14,4 @@ const COUNTRY = 'us'
 const SIZE = '40'
 const CATEGORY = 'business'
 
-export const API_URL_NEWS = 'https://' + API_HOST_NEWS + `/v2/top-headlines?country=${COUNTRY}&pageSize=${SIZE}&category=${CATEGORY}`
+export const API_URL_NEWS = 'http://' + API_HOST_NEWS + `/v2/top-headlines?country=${COUNTRY}&pageSize=${SIZE}&category=${CATEGORY}`

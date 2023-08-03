@@ -10,7 +10,6 @@ class Exchange {
     async render() {
         const currencies = ['USD', 'EUR', 'SGD', 'MYR', 'AUD', 'JPY', 'CNH', 'HKD', 'CAD', 'INR', 'DKK', 'GBP', 'NZD', 'MXN', 'IDR', 'TWD', 'THB', 'VND']
         const countCurrency = 6
-
         const urls = [] 
         const currencyValues = []
 
@@ -53,17 +52,7 @@ class Exchange {
                                         <p class="exchange__column-text">${val}</p>
                                     </li>
                                 `
-            }
-            else if (i === lengthUrls-1) {
-                htmlContent += `
-                                    <li class="exchange__column-item">
-                                        <h4 class="exchange__column-title">${key}:</h4>
-                                        <p class="exchange__column-text">${val}</p>
-                                    </li>
-                                </ul>
-                                `
-            }
-            else if (i % 3 === 0) {
+            } else if (i % 3 === 0) {
                 htmlContent += `
                                 </ul>
                                 <ul class="exchange__column-list">
@@ -78,6 +67,12 @@ class Exchange {
                                     <h4 class="exchange__column-title">${key}:</h4>
                                     <p class="exchange__column-text">${val}</p>
                                 </li>
+                                `
+            }
+
+            if (i === lengthUrls-1) {
+                htmlContent += `
+                                    </ul>
                                 `
             }
         }

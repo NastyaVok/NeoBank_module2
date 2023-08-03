@@ -26,9 +26,14 @@ class News {
         let htmlContent = ''
         let htmlContainer = ''
 
-        data.articles.forEach(({ urlToImage, title, description, url }) => {
-            const imgValid = urlToImage !== null ? validateImg.isImgURLValid(urlToImage) : false
+        for (let i = 0; i < data.articles.length; ++i) {
+            const urlToImage = data.articles[i].urlToImage
+            const title = data.articles[i].title
+            const description = data.articles[i].description
+            const url = data.articles[i].url
 
+            const imgValid = urlToImage !== null ? await validateImg.isImgURLValid(urlToImage) : false
+     
             if(imgValid && description) {
                 htmlContent += `
                     <div class="swiper-slide">
@@ -46,7 +51,6 @@ class News {
                     </div>
                 `
             } 
-
             htmlContainer = `
                 <section class="news">
                     <div class="container">
@@ -76,8 +80,8 @@ class News {
                     </div>
                 </section>
             ` 
-        ROOT_NEWS.innerHTML = htmlContainer; 
-		})
+            ROOT_NEWS.innerHTML = htmlContainer;
+          }
         const swiper = new Swiper('.swiper-container', {
             modules: [Navigation],
             slidesPerView: 1.2,
@@ -108,7 +112,7 @@ class News {
                     spaceBetween: 80,
                 }
             }
-        })
+        })    
     }
 }
 export default new News()

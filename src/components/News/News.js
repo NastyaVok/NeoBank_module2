@@ -12,7 +12,6 @@ import './News.css'
 class News {
 
     async render() {
-
         const options = {
             headers: {
                 'X-Api-Key': API_KEY_NEWS
@@ -20,8 +19,8 @@ class News {
         }
 
         const data = await getDataApi.getData(API_URL_NEWS, options)
-        
-        if (data === 'rejected') return
+    
+        if (data == 0) return
 
         let htmlContent = ''
         let htmlContainer = ''

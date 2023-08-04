@@ -20,15 +20,21 @@ class Exchange {
             }
         }
 
-        for (let i = 0; i < countCurrency; i++) {
-            urls.push(API_URL_CURRENCY + `?from=${currencies[i]}&to=RUB&q=1.0`)
-        }
+        for (let i = 0; i < countCurrency; i++) { 
+            const params = new URLSearchParams({
+                from: currencies[i],
+                to: "RUB",
+                q: "1.0",
+            });
 
+            urls.push(API_URL_CURRENCY + '?' + params.toString())
+        }
         const data = await getDataApi.getDataAllSettled(urls, options)
 
         for (let i = countCurrency-1; i > -1; i--) {
-            const condition = data[i] !== 'rejected' && Number(data[i])
 
+            const condition = data[i] !== 'rejected' && Number(data[i])
+            
             if(condition) { 
                 currencyValues.push({[currencies[i]]: data[i].toFixed(2)})
             }

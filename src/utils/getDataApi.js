@@ -2,7 +2,7 @@ class GetDataApi {
 
     async getData(url, options) {
 		try {
-			const response = await fetch(url, options);
+			const response = await fetch(url, options)
 
             const result = await response.json()
 
@@ -10,14 +10,21 @@ class GetDataApi {
 		} catch (error) {
 			console.log(error.message)
 
-			return reject
+			return false
 		}
 	}
 
     async getDataAllSettled(urls, options) {
-
-       return Promise.allSettled(urls.map(url => this.getData(url, options)))
-        .then(resp => resp.map(el => el.status === 'fulfilled' ? el.value : el.status))
+        const res = []
+        const data = await Promise.allSettled(urls.map(url => fetch(url, options)))
+        for (let el of data) {
+            if (el.status === 'fulfilled') {
+                const data = await el.value
+                const json = await data.json()
+                res.push(json)
+            }
+        }
+        return res
     }
 }
 
